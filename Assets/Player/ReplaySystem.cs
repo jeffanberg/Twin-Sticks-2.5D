@@ -31,7 +31,7 @@ public class ReplaySystem : MonoBehaviour {
 		rigidBody.isKinematic = false;
 		int frame = Time.frameCount % bufferFrames;
 		float time = Time.time;
-		print ("Writing frame " + frame);
+		//print ("Writing frame " + frame);
 		keyFrames [frame] = new MyKeyFrame (time, transform.position, transform.rotation);
 	}
 
@@ -46,7 +46,7 @@ public class ReplaySystem : MonoBehaviour {
 			}
 		}
 		int frame = Time.frameCount % frameCount;
-		print ("Reading frame " + frame);
+		//print ("Reading frame " + frame);
 		transform.position = keyFrames [frame].position;
 		transform.rotation = keyFrames [frame].rotation;
 
